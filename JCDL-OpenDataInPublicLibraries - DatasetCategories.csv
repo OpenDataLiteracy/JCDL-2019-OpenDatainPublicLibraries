@@ -1,0 +1,66 @@
+Candidate Categories from Portals,Aggregation (1),"Aggregation (2)
+",Final Category,Defintion,Example datasets
+[3] Shapefiles (layers),"location (e.g. map, address, lat/lon)",Geospatial,Catalog and Circulation,Infromation about the holings and lending practices of a library. These will often be annual or quarterly datasets released by system or branches.,"Physical Item Circulation
+Digital/Electronic Item Circulation
+Materials Counts
+Digital Holdings Counts
+Inter-library Loan Counts/Circulation
+Databases Count
+Serials Count
+Electronic Content Retrievals
+"
+"[4] location, electricity usage, user counts","utility usage (e.g. electricity, phone, water)
+",Facilities ,Events,"Informaiton about scheduling, programming, or regularly offered services for outreach. ","Programs Offereds
+Program Counts
+Program Attendance
+Meeting Counts
+Meeting Attendance
+"
+[5] location (Spatial dataset),"circulation and retrival counts (includes physical, digital, holds, info downloads)",Catalog and Circulation,Facilities,"Information about the operation of a library and branch system, including electricity use, operating hours, etc. ","Count of Libraries (Central & Branch)
+Count of Bookmobiles
+Count of Facilities
+Types of Facilities
+Square footage
+ services offered / operating hours (IMLS records annual hours open)
+"
+"[6] locations, circulation, popular titles, computer sessions, FOIA requests, visitors, holds, wi-fi usage, summer reading program","visitor count
+",Patrons ,Finanical,"Information about revenue, expenditures, etc. Does not include information about staff salary. ",
+"[7] location, door count, circulation, square footage","technology usage counts (includes computer, makerspace tech, printer, wifi)",Facilities ,Geospatial,Geographic or mapping informaiton - including shapefiles,"Library Locations
+Facilities Locations
+"
+"[8] location, door counts, programs, program attendance, collections, Spanish Language Use, meetings, meeting attendance, technology use, borrower data",FOIA Requests (specific to public library),Public Records ,Human Resources,"Information about staff, payroll, hiring, and benefits","Salaries & Benefits
+Staffing Count
+"
+"[9] location, funded projects",Program (includes counts and attendance),Events / Calendar,Patrons,"Information about the use of library facilities, lending practices, etc. ","Door Counts
+Patrons by Location (Zip Code)
+"
+"[10] location, circulation, visitors, cardholders, computer usage","patron/borrower (includes counts, aggregated locations)",Patrons,Public Records,The libraries response to public record requests,FOIA / Public Records Requests
+"[11] circulation, program attendance, computer use",materials counts,Catalog and Circulation,Technology Offerings ,Information about technology that is available to patrons or in use by library - including laptops and public terminals," technology use / computer usage / technology counts (# computer stations, laptops, wifi hotspot lending, mobile phone lending, etc.)"
+"[12] locations, facilities",Interlibrary Loan (to and from),Catalog and Circulation,,,
+"[13] locations, services","meetings non-library-hosted (includes counts and attendance)
+",Events / Calendar,,,
+[14] location (map),"services (not programs, includes bookmobiles)",Events / Calendar,,,
+[15] library services,facilities (includes size of facilities),Facilities ,,,
+"[16] usage, circulation",libraries count (includes central and branch),Facilities ,,,
+[17] patrons by zipcode,staffing (includes counts and salaries/benefits),HR ? ,,,
+"[18] circulation, collection, data dictionary",revenue,Financial ,,,
+Num Central Libraries,expenditures,,,,
+Num Branch Libraries,"open hours
+",facilities,,,
+Bookmobile Counts,,,,,
+Staffing Counts,,,,,
+"Revenue (Local, State, Federal, Other, Capital)",,,,,
+Salaries & Benefits ,,,,,
+"Expenditures (Staff, Print, Electronic, OtherCollection)",,,,,
+"Materials Counts (Print, ebooks, audio, downloads, video, databases, serials",,,,,
+library operating info (hours),,,,,
+total open hours,,,,,
+visits,,,,,
+"circulation (kids, electronic, physicalitem, downloads)",,,,,
+retrievals (electronic content),,,,,
+ILL,,,,,
+"Program Count (kids, adult, ya)",,,,,
+Program Attendance,,,,,
+Computer Count,,,,,
+Computer Use,,,,,
+WiFi,,,,,
