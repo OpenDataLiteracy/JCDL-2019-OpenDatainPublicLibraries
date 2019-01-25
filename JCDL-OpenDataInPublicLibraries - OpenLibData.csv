@@ -1,0 +1,98 @@
+City,State,Original Portal,Latest Portal ,Software,Datasets available,Notes about Datasets available,Public Library Data (Vetted),What is available? ,Proportion Library Data,"Searched ""library"" ","Searched ""public library"" ",,Library Data Last Updated,Notes
+Albuquerque,New Mexico,https://www.cabq.gov/abq-data/,https://www.cabq.gov/abq-data/,None,48,,0,,0,,,,,
+Anaheim,California,http://anaheim.opendata.junar.com/home,http://main-anaheim.opendata.arcgis.com/datasets?t=Public%20Safety,ArcGIS ,4,,0,,0,,,,,
+Anchorage,Alaska,https://data.muni.org/,https://data.muni.org/,Socrata,60,,0,,0,,,,,
+Arlington,Texas,http://www.arlington-tx.gov/data/,http://data-arlingtontx.opendata.arcgis.com/,ArcGIS ,38,,1,location ,0.02631578947,1,1,http://data-arlingtontx.opendata.arcgis.com/datasets?q=library,11.27.2018,
+Atlanta,Georgia,"http://opendata.atlantaregional.com/
+ http://gis.atlantaga.gov/
+ http://opendata.atlantapd.org/","https://www.atlantaga.gov/government/mayor-s-office/executive-offices/office-of-innovation-delivery-and-performance/dataatlanta
+",Custom Aggregator,unknown,,,,#VALUE!,,,,,
+Aurora,Colorado,https://apps2.auroragov.org/opendata/,http://data-auroraco.opendata.arcgis.com/datasets?q=Library%20,ArcGIS,103,,0,,0,,,,,
+Austin,Texas,https://data.austintexas.gov/,https://data.austintexas.gov/,Socrata,971,restricted to type: Datasets,5,"location, circulation, cardholder count, wireless usage, social media presence",0.005149330587,16,13,https://data.austintexas.gov/browse?q=library&sortBy=relevance&utf8=%E2%9C%93,12.13.2018,"Searched for ""library"" restricted to type ""dataset"", chose only those datasets directly related to public libraries. Searches restricted to view type ""Datasets"""
+Bakersfield,California,http://www.bakersfieldcity.us/gov/depts/community_development/planning/planning_services/mapping_n_gis.htm,http://www.bakersfieldcity.us/gov/depts/community_development/planning/planning_services/mapping_n_gis.htm,ArcGIS,30,map layers,0,Shapefiles (layers),0,,,,11.01.2018,"Two different data ""portals"" which are difficult to compare to traditional data portals like Socrata https://bakersfieldcity.us/gov/depts/geographic_information_services/data_download.htm and http://bakersfielddatalibrary-cob.opendata.arcgis.com/ "
+Baltimore,Maryland,https://data.baltimorecity.gov/,https://data.baltimorecity.gov/,Socrata,104,restricted to type: Datasets,1,location ,0.009615384615,2,2,,02.05.2017,"Searches restricted to view type ""Datasets"""
+Baton Rouge,Louisiana,https://data.brla.gov/,https://data.brla.gov/,Socrata,37,restricted to type: Datasets,1,location,0.02702702703,1,1,,12.02.2018,"Searches restricted to view type ""Datasets"". This is a dataset with all City-Parish facilities and includes public library locations. It is not specific to libraries."
+Berkeley,California,http://www.ci.berkeley.ca.us/ContentDisplay.aspx?id=105239,https://data.cityofberkeley.info/,Socrata,25,,0,,0,0,0,,,
+Boise,Idaho,http://opendata.cityofboise.org/,http://opendata.cityofboise.org/,ArcGIS,58,,0,,0,,,,,
+Boston,Massachusetts,https://data.boston.gov/,https://data.boston.gov/,CKAN,142,,3,"location, electricity usage, user counts",0.02112676056,4,4,,,
+Buffalo,New York,https://data.ny.gov/,https://data.buffalony.gov/,Socrata,616,restricted to type: Datasets,0,,0,4,3,,,"Searches restricted to view type ""Datasets""."
+Chandler,Arizona,https://www.chandlerpd.com/data/,https://www.chandlerpd.com/data/,Socrata?,9,only police dept data,0,,0,,,,,
+Charlotte,North Carolina,http://clt-charlotte.opendata.arcgis.com/,http://data.charlottenc.gov/,ArcGIS,138,,2,location (Spatial dataset),0.01449275362,2,2,,11.28.2018,
+Chesapeake,Virginia,http://www.cityofchesapeake.net/government/City-Departments/Departments/Information-Technology-Department/open-data-portal.htm,http://www.cityofchesapeake.net/government/City-Departments/Departments/Information-Technology-Department/open-data-portal.htm,Custom Aggregator,45,,0,  ,0,2,,,,"These aren't actually datasets, they are just links out to the library websites.
+"
+Chicago,Illinois,https://data.cityofchicago.org/,https://data.cityofchicago.org/,Socrata,452,restricted to type: Datasets,55,"locations, circulation, popular titles, computer sessions, FOIA requests, visitors, holds, wi-fi usage, summer reading program",0.1216814159,75,56,,12.27.2018,"Searches restricted to view type ""Datasets""."
+Chula Vista,California,http://www.chulavistaca.gov/departments/police-department/about-us/open-data-initiative,https://chulavista-cvgis.opendata.arcgis.com/,ArcGIS,45,,0,,0,0,0,,,
+Cincinnati,Ohio,https://data.cincinnati-oh.gov/,https://data.cincinnati-oh.gov/,Socrata,83,restricted to type: Datasets,0,,0,0,0,,,
+Columbus,Ohio,http://data-columbus.opendata.arcgis.com/,http://data-columbus.opendata.arcgis.com/,ArcGIS,79,,0,,0,1,1,,,"Only dataset related to libraries is called ""Public Places"""
+Dallas,Texas,https://www.dallasopendata.com/,https://www.dallasopendata.com/,Socrata,87,restricted to type: Datasets,1,location,0.01149425287,2,2,,02.10.2017,"Searches restricted to view type ""Datasets""."
+Denver,Colorado,https://www.denvergov.org/opendata,https://www.denvergov.org/opendata,CKAN,229,,1,"location, door count, circulation, square footage",0.004366812227,1,1,,01.11.2018,
+Detroit,Michigan,https://data.detroitmi.gov/,https://data.detroitmi.gov/,Socrata,85,restricted to type: Datasets,0,,0,0,0,,,"Searches restricted to view type ""Datasets""."
+Durham,North Carolina,https://opendurham.nc.gov/page/home/,http://gis-durhamnc.opendata.arcgis.com/,ArcGIS,163,,23,"location, door counts, programs, program attendance, collections, Spanish Language Use, meetings, meeting attendance, technology use, borrower data",0.1411042945,24,3,,12.20.2018,
+Fort Wayne,Indiana,http://maps.cityoffortwayne.org/,http://maps.cityoffortwayne.org/,ArcGIS,51,map layers,0,,0,,,,,
+Fort Worth,Texas,https://data.fortworthtexas.gov/,https://data.fortworthtexas.gov/,Socrata,10,restricted to type: Datasets,0,,0,1,0,,,
+Fremont,California,https://fremont.gov/2082/Open-Data,https://fremont.gov/2082/Open-Data,ArcGIS,15,,0,,0,0,0,,,
+Glendale,Arizona,http://data-cog-gis.opendata.arcgis.com/,http://data-cog-gis.opendata.arcgis.com/,ArcGIS,25,,1,location,0.04,1,0,,09.18.2012,
+Greensboro,North Carolina,https://data.greensboro-nc.gov/,https://data.greensboro-nc.gov/,Socrata,14,restricted to type: Datasets,0,,0,0,0,,,
+Henderson,Nevada,https://opendata.cityofhenderson.com/,https://opendata.cityofhenderson.com/,Socrata,14,restricted to type: Datasets,0,,0,0,0,,,
+Honolulu,Hawaii,https://data.honolulu.gov/,https://data.honolulu.gov/,Socrata,36,restricted to type: Datasets,0,,0,0,0,,,
+Houston,Texas,http://data.ohouston.org/,http://data.houstontx.gov/,CKAN,247,,1,location,0.004048582996,1,1,,,
+Indianapolis,Indiana,http://data.indy.gov/,http://data.indy.gov/,ArcGIS,229,,0,,0,0,0,,,
+Jacksonville,Florida,http://www.coj.net/jaxscore-1-0.aspx,http://www.coj.net/jaxscore-1-0.aspx,GIS,,,,,#DIV/0!,,,,,This is not a standard open data portal
+Jersey City,New Jersey,http://data.jerseycitynj.gov/,http://data.jerseycitynj.gov/,OpenDataSoft,338,,0,,0,1,0,,,One dataset that is a map of libraries and schools.
+Kansas City,Kansas,http://yourdata.wycokck.org/,http://yourdata.wycokck.org/,ArcGIS,58,,0,,0,0,0,,,
+Kansas City,Missouri,https://data.kcmo.org/,https://data.kcmo.org/,Socrata,210,restricted to type: Datasets,0,,0,1,0,,,"Searches restricted to view type ""Datasets""."
+Las Vegas,Nevada,https://opendata.lasvegasnevada.gov/,https://opendata.lasvegasnevada.gov/,Socrata,108,restricted to type: Datasets,0,,0,0,0,,,
+Lexington,Kentucky,https://data.lexingtonky.gov/,https://data.lexingtonky.gov/,CKAN,98,,1,location,0.01020408163,1,0,,06.30.2017,map layer only
+Lincoln,Nebraska,http://opendata.lincoln.ne.gov/,http://opendata.lincoln.ne.gov/,ArcGIS,197,,0,,0,1,0,,,
+Long Beach,California,http://www.longbeach.gov/openlb/,http://datalb.longbeach.gov/,ArcGIS,97,,2,"location, funded projects",0.0206185567,9,5,,01.10.2018,map layers
+Los Angeles,California,https://data.lacity.org/,https://data.lacity.org/,Socrata,399,restricted to type: Datasets,3,"location, circulation, visitors, cardholders, computer usage",0.007518796992,5,1,,10.22.2018,"Searches restricted to view type ""Datasets""."
+Louisville,Kentucky,https://data.louisvilleky.gov/,https://data.louisvilleky.gov/,DKAN,222,restricted to Content Types: Dataset,0,,0,0,0,,,"Searches restricted to content type ""Dataset""."
+Lubbock,Texas,https://www.mylubbock.us/departmental-websites/departments/gis-data-services/data-sharing,https://ci.lubbock.tx.us/departments/gis-data-services/public-data,ArcGIS,unknown,,,,#VALUE!,,,,,This is a different instantiation of ArcGIS that makes it very difficult to find counts of datasets.
+Madison,Wisconsin,https://data.cityofmadison.com/,https://data.cityofmadison.com/,ArcGIS,149,,1,location,0.006711409396,1,0,,09.07.2017,map layer 
+Mesa,Arizona,http://open.mesaaz.gov/home,https://data.mesaaz.gov/,Socrata,77,restricted to type: Datasets,3,"circulation, program attendance, computer use",0.03896103896,3,2,,01.02.2019,"Searches restricted to view type ""Datasets"".
+"
+Milwaukee,Wisconsin,http://city.milwaukee.gov/mkedata#.WVXC2lGQzGg,https://data.milwaukee.gov/,CKAN,263,,0,,0,1,1,,,
+Minneapolis,Minnesota,http://opendata.minneapolismn.gov/,http://opendata.minneapolismn.gov/,ArcGIS,112,,0,,0,0,0,,,
+Nashville,Tennessee,https://data.nashville.gov/,https://data.nashville.gov/,Socrata,77,restricted to type: Datasets,1,"locations, facilities",0.01298701299,4,3,,10.21.2016,"Searches restricted to view type ""Datasets""."
+New Orleans,Louisiana,https://data.nola.gov/,https://data.nola.gov/,Socrata,111,restricted to type: Datasets,0,,0,0,0,,,"Searches restricted to view type ""Datasets""."
+New York City,New York,https://opendata.cityofnewyork.us/,https://opendata.cityofnewyork.us/,Socrata,1590,restricted to type: Datasets,5,"locations, services",0.003144654088,9,9,,09.10.2018,"Searches restricted to view type ""Datasets""."
+Newark,New Jersey,http://data.ci.newark.nj.us/,http://data.ci.newark.nj.us/,CKAN,109,,2,location,0.01834862385,2,1,,07.17.2015,geoJSON
+Norfolk,Virginia,http://data-orf.opendata.arcgis.com/,https://data.norfolk.gov/,Socrata,20,restricted to type: Datasets,0,,0,0,0,,,
+Oakland,California,https://data.oaklandnet.com/,https://data.oaklandnet.com/,Socrata,192,restricted to type: Datasets,1,location,0.005208333333,1,1,,03.06.2015,"Searches restricted to view type ""Datasets""."
+Oklahoma City,Oklahoma,https://data.okc.gov,https://data.okc.gov,Custom ,90,,1,location (map),0.01111111111,,,,07.11.2017,
+Omaha,Nebraska,http://dataomaha.com/,http://dataomaha.com/,Custom Aggregator,unknown,,,,#VALUE!,,,,,"run by Omaha World Herald, non-traditional data portal"
+Orlando,Florida,https://data.cityoforlando.net/,https://data.cityoforlando.net/,Socrata,7,restricted to type: Datasets,0,,0,0,0,,,
+Philadelphia,Pennsylvania,http://www.phila.gov/data/,http://www.phila.gov/data/,CKAN,221,,0,,0,0,0,,,
+Phoenix,Arizona,https://www.phoenix.gov/opendata,https://www.phoenix.gov/opendata,CKAN,36,,3,"hours, meeting rooms, computers",0.08333333333,3,3,,09.15.2017,
+Plano,Texas,https://dashboard.plano.gov/,https://dashboard.plano.gov/browse,Socrata,48,restricted to type: Datasets,1,library services,0.02083333333,1,0,,12.26.2018,"Searches restricted to view type ""Datasets""."
+Portland,Oregon,"https://www.portlandoregon.gov/28130
+ https://www.portlandoregon.gov/police/71673","http://gis-pdx.opendata.arcgis.com/
+",ArcGIS,211,,0,,0,0,0,,,
+Raleigh,North Carolina,https://data.raleighnc.gov/,https://data.raleighnc.gov/,ArcGIS,150,,1,location,0.006666666667,2,2,,12.14.2018,
+Reno,Nevada,https://performance.reno.gov/,https://performance.reno.gov/,,,,,,#DIV/0!,,,,,Links broken including http://reno.gov/openreno
+Riverside,California,http://riversideca.gov/transparency/data/,http://riversideca.gov/transparency/data/,Custom,11,,1,location,0.09090909091,,,,05.09.2017,
+Sacramento,California,http://data.cityofsacramento.org/,http://data.cityofsacramento.org/,ArcGIS,92,,0,,0,1,1,,,
+San Antonio,Texas,"https://sanantoniotx.opengov.com/transparency
+ https://www.sanantonio.gov/SAPD/SAPD-Open-Data-Initiative
+ https://www.sanantonio.gov/opengovernment/","http://opendata-cosagis.opendata.arcgis.com/
+",ArcGIS,77,,1,location,0.01298701299,1,0,,,
+San Bernardino,California,http://open.sbcounty.gov/,http://open.sbcounty.gov/,ArcGIS,24,,0,,0,0,0,,,
+San Diego,California,https://data.sandiego.gov/,https://data.sandiego.gov/,JKAN,79,,1,location,0.01265822785,,,,12.25.2018,Built with Jekyll on Github
+San Francisco,California,https://datasf.org/opendata/,https://datasf.org/opendata/,Socrata,324,restricted to type: Datasets,1,"usage, circulation",0.003086419753,1,1,,12.22.2016,"Searches restricted to view type ""Datasets""."
+San Jose,California,http://data.sanjoseca.gov/home,http://data.sanjoseca.gov/,Kaggle,41,,0,,0,1,0,,,Data available behind log-in
+Santa Ana,California,http://opendata-santa-ana.opendata.arcgis.com/,https://gis-santa-ana.opendata.arcgis.com/,ArcGIS,17,,0,,0,0,0,,,
+Santa Monica,California,https://data.smgov.net/,https://data.smgov.net/,Socrata,33,,1,patrons by zipcode,0.0303030303,1,,1,08.29.2014,"Searches restricted to view type ""Datasets""."
+Scottsdale,Arizona,http://data.scottsdaleaz.gov/,http://data.scottsdaleaz.gov/,CKAN,43,,1,location,0.02325581395,1,0,,09.12.2017,
+Seattle,Washington,https://data.seattle.gov/,https://data.seattle.gov/,Socrata,267,restricted to type: Datasets,3,"circulation, collection, data dictionary",0.01123595506,6,4,,01.06.2019,"Searches restricted to view type ""Datasets""."
+St. Louis,Missouri,https://www.stlouis-mo.gov/data/,https://www.stlouis-mo.gov/data/,Custom,47,,0,,0,0,0,,,
+St. Paul,Minnesota,https://information.stpaul.gov/,https://information.stpaul.gov/,Socrata,20,restricted to type: Datasets,0,,0,1,1,,,"Searches restricted to view type ""Datasets""."
+Tampa,Florida,http://city-tampa.opendata.arcgis.com/,http://city-tampa.opendata.arcgis.com/,ArcGIS,93,,1,location,0.01075268817,1,0,,03.05.2018,
+Tempe,Arizona,https://data.tempe.gov/,https://data.tempe.gov/,CKAN,107,,0,,0,4,3,,,
+Tucson,Arizona,https://data.tucsonaz.gov/,https://data.tucsonaz.gov/,Custom Aggregator,24,,0,,0,,,,,
+Tulsa,Oklahoma,https://www.cityoftulsa.org/government/departments/information-technology/open-tulsa/,https://www.cityoftulsa.org/government/departments/information-technology/open-tulsa/,Custom Aggregator,31,,0,,0,,,,,
+Virginia Beach,Virginia,"https://data.vbgov.com/
+ http://gis.data.vbgov.com/","https://data.vbgov.com/
+",Socrata,30,restricted to type: Datasets,0,,0,1,1,,,"Searches restricted to view type ""Datasets""."
+Washington,DC,http://opendata.dc.gov/,http://opendata.dc.gov/,ArcGIS,1161,,1,location,0.0008613264427,7,6,,05.11.2018,
+Wichita,Kansas,http://opendata.wichita.gov/,http://opendata.wichita.gov/,ArcgGIS,71,,0,,0,0,0,,,
+Winston-Salem,North Carolina,http://www.cityofws.org/departments/planning/gis/gis-data-sets-for-download,http://www.cityofws.org/departments/planning/gis/gis-data-sets-for-download,Custom,16,,0,,0,,,,,"According to their Open Data Policy (http://www.cityofws.org/Departments/Information-Systems/Open-Data-Policy July 2018) they will have a ""Section 4: Central Online Location for Published Data"""
