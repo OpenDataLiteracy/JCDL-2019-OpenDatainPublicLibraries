@@ -1,0 +1,427 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output.
+%%%                        It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+%Entries
+
+@book{molz1999civic,
+  title={Civic space/cyberspace: The American public library in the information age},
+  author={Molz, Redmond Kathleen and Dain, Phyllis},
+  year={1999},
+  publisher={Mit Press}
+}
+
+@article{davies2012promises,
+  title={The promises and perils of Open Government Data (OGD)},
+  author={Davies, Tim G and Bawa, Zainab Ashraf},
+  journal={The Journal of Community Informatics},
+  volume={8},
+  number={2},
+  pages={1--8},
+  year={2012}
+}
+
+@article{janssen2012benefits,
+  title={Benefits, adoption barriers and myths of open data and open government},
+  author={Janssen, Marijn and Charalabidis, Yannis and Zuiderwijk, Anneke},
+  journal={Information systems management},
+  volume={29},
+  number={4},
+  pages={258--268},
+  year={2012},
+  publisher={Taylor \& Francis}
+}
+
+@inproceedings{yan2018mining,
+  title={Mining Open Government Data Used in Scientific Research},
+  author={Yan, An and Weber, Nicholas},
+  booktitle={International Conference on Information},
+  pages={303--313},
+  year={2018},
+  organization={Springer}
+}
+
+@article{robinson2017open,
+  title={Open Data Community Maturity: Libraries as Civic Infomediaries.},
+  author={Robinson, Pamela and Mather, Lisa Ward},
+  journal={Journal of the Urban \& Regional Information Systems Association},
+  volume={28},
+  number={1},
+  year={2017}
+}
+
+@misc{cityofboston,
+    title={CityScore},
+    url={https://data.boston.gov/dataset/cityscore},
+    journal={Analyze Boston},
+    author={City of Boston}
+}
+
+@article{chun2010government,
+  title={Government 2.0: Making connections between citizens, data and government},
+  author={Chun, Soon and Shulman, Stuart and Sandoval, Rodrigo and Hovy, Eduard},
+  journal={Information Polity},
+  volume={15},
+  number={1, 2},
+  pages={1--9},
+  year={2010},
+  publisher={IOS Press}
+}
+
+@article{attard2015systematic,
+  title={A systematic review of open government data initiatives},
+  author={Attard, Judie and Orlandi, Fabrizio and Scerri, Simon and Auer, S{\"o}ren},
+  journal={Government Information Quarterly},
+  volume={32},
+  number={4},
+  pages={399--418},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@book{kitchin2014data,
+  title={The data revolution: Big data, open data, data infrastructures and their consequences},
+  author={Kitchin, Rob},
+  year={2014},
+  publisher={Sage}
+}
+
+@article{zuiderwijk2014open,
+  title={Open data policies, their implementation and impact: A framework for comparison},
+  author={Zuiderwijk, Anneke and Janssen, Marijn},
+  journal={Government Information Quarterly},
+  volume={31},
+  number={1},
+  pages={17--29},
+  year={2014},
+  publisher={Elsevier}
+}
+
+@article{curran2007taking,
+  title={Taking the information to the public through Library 2.0},
+  author={Curran, Kevin and Murray, Michelle and Christian, Martin},
+  journal={Library Hi Tech},
+  volume={25},
+  number={2},
+  pages={288--297},
+  year={2007},
+  publisher={Emerald Group Publishing Limited}
+}
+
+@misc{plsreport2016,
+    title={Public Libraries Survey Fiscal Year 2016},
+    author={Frehill, Lisa and Williams, Kim and Wan, Carol and Nielsen, Evan},
+    url={https://www.imls.gov/sites/default/files/fy2016_pls_data_file_documentation.pdf},
+    year={2018},
+    publisher={Institute of Museum and Library Services}
+}
+
+@article{allen2017strategic,
+  title={Strategic open data preservation: Roles and opportunities for broader engagement by librarians and the public},
+  author={Allen, Laurie and Stewart, Claire and Wright, Stephanie},
+  journal={College \& Research Libraries News},
+  volume={78},
+  number={9},
+  pages={482},
+  year={2017}
+}
+
+@report{mercier_we_2015,
+	title = {We listed 2600+ Open Data portals around the world! See how!},
+	url = {https://www.opendatasoft.com/2015/11/02/how-we-put-together-a-list-of-1600-open-data-portals-around-the-world-to-help-open-data-community/},
+	abstract = {We are Open Data geeks. And since we could not find a unified resource of all Open Data portals around the world, we did it ourselves. Find out how!},
+	author = {Mercier, Rémi},
+	urldate = {2019-01-24},
+	date = {2015},
+	langid = {american},
+}
+
+@inproceedings{conradie2012exploring,
+  title={Exploring process barriers to release public sector information in local government},
+  author={Conradie, Peter and Choenni, Sunil},
+  booktitle={Proceedings of the 6th international conference on theory and practice of electronic governance},
+  pages={5--13},
+  year={2012},
+  organization={ACM}
+}
+
+@article{bearfield2017can,
+  title={Can you find it on the web? An assessment of municipal e-government transparency},
+  author={Bearfield, Domonic A and Bowman, Ann O’M},
+  journal={The American Review of Public Administration},
+  volume={47},
+  number={2},
+  pages={172--188},
+  year={2017},
+  publisher={SAGE Publications Sage CA: Los Angeles, CA}
+}
+
+@article{kassen2013promising,
+  title={A promising phenomenon of open data: A case study of the Chicago open data project},
+  author={Kassen, Maxat},
+  journal={Government Information Quarterly},
+  volume={30},
+  number={4},
+  pages={508--513},
+  year={2013},
+  publisher={Elsevier}
+}
+
+@article{mergel2018open,
+  title={Open data outcomes: US cities between product and process innovation},
+  author={Mergel, Ines and Kleibrink, Alexander and S{\"o}rvik, Jens},
+  journal={Government Information Quarterly},
+  volume={35},
+  number={4},
+  pages={622--632},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{washington2016open,
+  title={Open for Whom? An Overview of Data. Gov File Formats},
+  author={Washington, Anne and Morar, David},
+  year={2016}
+  Publisher={SSRN},
+  url = {http://dx.doi.org/10.2139/ssrn.2770925},
+}
+
+@article{smith2017landscape,
+  title={Landscape of Major US Public Library Data Collection Efforts: A Working Paper for the Measures that Matter Initiative},
+  author={Smith, John L and Matthews, Joseph and Crandall, Mike and Nyberg, Sandy and Cherubini, Timothy},
+  year={2017}
+  url={https://digital.lib.washington.edu/researchworks/handle/1773/40725},
+}
+
+@article{knievel2006use,
+  title={Use of circulation statistics and interlibrary loan data in collection management},
+  author={Knievel, Jennifer E and Wicht, Heather and Connaway, Lynn Silipigni},
+  journal={College \& Research Libraries},
+  volume={67},
+  number={1},
+  pages={35--49},
+  year={2006}
+}
+
+@article{renaud2015mining,
+  title={Mining library and university data to understand library use patterns},
+  author={Renaud, John and Britton, Scott and Wang, Dingding and Ogihara, Mitsunori},
+  journal={The Electronic Library},
+  volume={33},
+  number={3},
+  pages={355--372},
+  year={2015},
+  publisher={Emerald Group Publishing Limited}
+}
