@@ -1,0 +1,327 @@
+---
+title: "JCDL-2019-OpenDatainPublicLibraries"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r}
+# Load relevant libraries
+library(dplyr)
+library(Hmisc)
+library(summarytools)
+library(tidyr)
+library(splitstackshape)
+```
+
+```{r}
+# Read in full data 
+jcdl <- read.csv("~/Google Drive File Stream/My Drive/ODL/JCDL/JCDLAnalysisDataset012319.tsv", sep = "\t", strip.white = TRUE)
+```
+
+```{r}
+# Fix date format in DateLibDataLastUpdated
+jcdl$DateLibDataLastUpdated <- as.Date(jcdl$DateLibDataLastUpdated, format = "%m.%d.%Y")
+# Fix date format in StartDate
+jcdl$StartDate <- as.Date(jcdl$StartDate, format = "%m/%d/%Y")
+# Fix date format in EndDate
+jcdl$EndDate <- as.Date(jcdl$EndDate, format = "%m/%d/%Y")
+# Variables to datatype factor
+jcdl$Locale <- as.factor(jcdl$Locale)
+jcdl$ReportingStatus <- as.factor(jcdl$ReportingStatus)
+jcdl$MailingZip <- as.factor(jcdl$MailingZip)
+jcdl$Year <- as.factor(jcdl$Year)
+# Variables to datatype character
+jcdl$Portal_URL <- as.character(jcdl$Portal_URL)
+jcdl$NotesDatasetsAvailable <- as.character(jcdl$NotesDatasetsAvailable)
+jcdl$Notes <- as.character(jcdl$Notes)
+jcdl$LibraryDataCategories <- as.character(jcdl$LibraryDataCategories)
+```
+
+```{r}
+# Check unique values
+unique(jcdl$Software)
+```
+
+```{r}
+# See what values we have for Locale
+unique(jcdl$Locale)
+```
+
+```{r}
+# Create a LocaleDescr column and fill based on condition
+jcdl <- jcdl %>% 
+    mutate(LocaleDescr = case_when(
+                Locale == 11 ~ "City Large",
+                Locale == 12 ~ "City Midsize",
+                Locale == 13 ~ "City Small",
+                Locale == 21 ~ "Suburban Large"
+))
+
+```
+
+```{r}
+# Change datatype of LocaleDescr
+jcdl$LocaleDescr <- as.factor(jcdl$LocaleDescr)
+```
+
+```{r}
+# Create a RepStatDescr column and fill based on condition
+jcdl <- jcdl %>% 
+    mutate(RepStatDescr = case_when(
+                ReportingStatus == 1 ~ "Respondent with no imputed data",
+                ReportingStatus == 2 ~ "Respondent with both reported and imputed data",
+                ReportingStatus == 3 ~ "Nonrespondent not imputed",
+                ReportingStatus == 4 ~ "Nonrespondent with imputed data"
+))
+```
+
+```{r}
+# Change datatype of RepStatDescr
+jcdl$RepStatDescr <- as.factor(jcdl$RepStatDescr)
+```
+
+```{r}
+# Really helpful code from https://stackoverflow
+# Split into individual categories and create dummy variables.
+jcdl <- cSplit_e(jcdl, split.col = "LibraryDataCategories", sep = ",", type = "character", 
+         mode = "binary", fixed = TRUE, fill = 0)
+```
+
+```{r}
+# Uncomment this to view a nice table of descriptive stats in the Viewer
+#view(dfSummary(jcdl))
+```
+
+```{r}
+# Uncomment for descriptive stats
+#Hmisc::describe(jcdl)
+```
+
+```{r}
+# Simple linear regression model
+jcdl_PropLR <- lm(ProportionPublicLibData ~ OpenDataCensusScores, data=jcdl)
+summary(jcdl_PropLR)
+```
+
+```{r}
+# Simple linear regression model
+jcdl_VettLR <- lm(CountVettedPublicLibData ~ OpenDataCensusScores, data=jcdl)
+summary(jcdl_VettLR)
+```
+
+```{r}
+# Simple linear regression model
+jcdl_TotLR <- lm(TotalDatasetsAvailable ~ OpenDataCensusScores, data=jcdl)
+summary(jcdl_TotLR)
+```
+
+```{r}
+# Simple linear regression model
+jcdl_PropSizeLR <- lm(ProportionPublicLibData ~ LocaleDescr, data=jcdl)
+summary(jcdl_PropSizeLR)
+```
+
+```{r}
+# Simple linear regression model
+jcdl_VettSizeLR <- lm(CountVettedPublicLibData ~ LocaleDescr, data=jcdl)
+summary(jcdl_VettSizeLR)
+```
+
+```{r}
+# Simple linear regression model
+jcdl_TotSizeLR <- lm(TotalDatasetsAvailable ~ LocaleDescr, data=jcdl)
+summary(jcdl_TotSizeLR)
+```
+```{r}
+# Simple linear regression model
+jcdl_TotRevCityLR <- lm(TotalDatasetsAvailable ~ TotalRevenue, data=jcdl)
+summary(jcdl_TotRevCityLR)
+```
+
+
+```{r}
+# Simple linear regression model
+jcdl_TotRevLR <- lm(CountVettedPublicLibData ~ TotalRevenue, data=jcdl)
+summary(jcdl_TotRevLR)
+```
+
+```{r}
+# Simple linear regression model
+jcdl_TotStaffLR <- lm(CountVettedPublicLibData ~ TotalStaff, data=jcdl)
+summary(jcdl_TotStaffLR)
+```
+
+```{r}
+# Create temporary matrix to use in Pearson's correlation
+x <- jcdl %>% select(TotalRevenue, TotalStaff)
+x$TotalRevenue <- as.numeric(x$TotalRevenue)
+
+```
+
+```{r}
+# Calculate Pearson's correlation
+cor(x)
+```
+
+
+```{r}
+# Run (simple) LM dependent variable ProportionPublicLibData against all 
+# possible numeric columns
+
+# Adapted from https://stackoverflow.com/questions/30583917/regression-loop-in-r-for-data-frames
+
+for(i in names(jcdl))
+{ 
+    if(is.numeric(jcdl[,i]))  ##if column is numeric run regression
+    {       
+       fit <- lm(ProportionPublicLibData ~ jcdl[,i], data=jcdl) 
+       coeff <- summary(fit)$coefficients[,4][2] #output only the p-values
+       writeLines(paste(coeff,i,"\n"))
+    }
+}
+```
+
+```{r}
+# Run (simple) LM dependent variable CountVettedPublicLibData against all 
+# possible numeric columns
+
+# Adapted from https://stackoverflow.com/questions/30583917/regression-loop-in-r-for-data-frames
+
+for(i in names(jcdl))
+{ 
+    if(is.numeric(jcdl[,i]))  ##if column is numeric run regression
+    {       
+       fit <- lm(CountVettedPublicLibData ~ jcdl[,i], data=jcdl) 
+       coeff <- summary(fit)$coefficients[,4][2] #output only the p-values
+       writeLines(paste(coeff,i,"\n"))
+    }
+}
+```
+
+```{r}
+library(reshape2)
+dfm <- melt(jcdl[,c('LibraryDataCategories_catalogandcirculation','LibraryDataCategories_eventscalendar',
+                    'LibraryDataCategories_facilities', 'LibraryDataCategories_financial',
+                    'LibraryDataCategories_geospatial', 'LibraryDataCategories_patrons',
+                    'LibraryDataCategories_publicrecords', 'LibraryDataCategories_technologyofferings',
+'LibraryDataCategories_utilities')])
+```
+```{r}
+# total datasets by category
+dfm <- dfm %>% group_by(variable) %>% summarise("total" = sum(value))
+```
+
+```{r}
+# barchart of datset totals by category
+p <- ggplot(dfm, aes(variable, total)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  scale_x_discrete(labels=c("LibraryDataCategories_catalogandcirculation" = "Catalog & Circulation",
+                            "LibraryDataCategories_eventscalendar" = "Events & Calendar",
+                            "LibraryDataCategories_facilities" = "Facilities",
+                            "LibraryDataCategories_financial" = "Financial",
+                            "LibraryDataCategories_geospatial" = "Geospatial",
+                            "LibraryDataCategories_patrons" = "Patrons",
+                            "LibraryDataCategories_publicrecords" = "Public Records",
+                            "LibraryDataCategories_technologyofferings" = "Technology Offerings",
+                            "LibraryDataCategories_utilities" = "Utilities")) +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+  geom_text(aes(label=total), vjust=1.6, color="white", size=3.5) +
+  xlab("Dataset Category") +
+  ylab("Datasets Available")
+p
+ggsave("~/Google Drive File Stream/My Drive/ODL/JCDL/categories_barchart.png")
+```
+
+```{r}
+# same barcgart as above but arranged in descending order of dataset count
+p <- ggplot(dfm, aes(x = reorder(variable, -total), total)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  scale_x_discrete(labels=c("LibraryDataCategories_catalogandcirculation" = "Catalog & Circulation",
+                            "LibraryDataCategories_eventscalendar" = "Events & Calendar",
+                            "LibraryDataCategories_facilities" = "Facilities",
+                            "LibraryDataCategories_financial" = "Financial",
+                            "LibraryDataCategories_geospatial" = "Geospatial",
+                            "LibraryDataCategories_patrons" = "Patrons",
+                            "LibraryDataCategories_publicrecords" = "Public Records",
+                            "LibraryDataCategories_technologyofferings" = "Technology Offerings",
+                            "LibraryDataCategories_utilities" = "Utilities")) +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+  geom_text(aes(label=total), vjust=-0.4, color="black", size=3.5) +
+  xlab("Dataset Category") +
+  ylab("Datasets Available")
+p
+ggsave("~/Google Drive File Stream/My Drive/ODL/JCDL/categories_barchart_sorted.png")
+```
+
+```{r}
+nrow(jcdl[jcdl$CountVettedPublicLibData > 0,])
+length(jcdl$CountVettedPublicLibData[jcdl$CountVettedPublicLibData > 0])
+sum(which(jcdl$CountVettedPublicLibData > 0))
+```
+
+```{r}
+# Create df with just necessary columns and rows where CountVettedPublicLibData is greater than 0
+no_ds <- jcdl %>%
+  select(City, State, Software, TotalDatasetsAvailable, CountVettedPublicLibData, ProportionPublicLibData) %>%
+  filter(CountVettedPublicLibData > 0)
+```
+
+```{r}
+# barchart of cities with more than 1 library dataset
+no_ds2 <- filter(no_ds, CountVettedPublicLibData > 1)
+p1 <- ggplot(no_ds2, aes(City, CountVettedPublicLibData)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+  xlab("City") +
+  ylab("Datasets Available") 
+p1
+#ggsave("~/Google Drive File Stream/My Drive/ODL/JCDL/cities_barchart.png")
+```
+
+```{r}
+# sorted barchart of cities with more than 1 library dataset
+p1 <- ggplot(no_ds2, aes(x = reorder(City, -CountVettedPublicLibData), CountVettedPublicLibData)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+  geom_text(aes(label=CountVettedPublicLibData), vjust=-0.4, color="black", size=3.5) +
+  xlab("City") +
+  ylab("Datasets Available") 
+p1
+ggsave("~/Google Drive File Stream/My Drive/ODL/JCDL/cities_barchart_sorted_morethanone.png")
+```
+
+```{r, fig.width=10, fig.height=4}
+df1 <- data.frame(jcdl$TotalRevenue/10000000, jcdl$CountVettedPublicLibData, jcdl$City)
+df2 <- melt(df1, id.vars='jcdl.City')
+head(df2)
+
+
+ggplot(df2, aes(x=jcdl.City, y=value, fill=variable)) +
+    geom_bar(stat='identity', position='dodge')+
+  theme(axis.text.x = element_text(angle = 75, hjust = 1))
+```
+
+
+```{r}
+p1 <- ggplot(jcdl, aes(City, TotalRevenue)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  theme(axis.text.x = element_text(angle = 75, hjust = 1)) +
+  xlab("City") +
+  ylab("Total Library Revenue") 
+p1
+ggsave("~/Google Drive File Stream/My Drive/ODL/JCDL/cities_revenue_barchart.png")
+```
+
+```{r}
+jcdl %>%
+  select(City, CountVettedPublicLibData) %>%
+  arrange(desc(CountVettedPublicLibData))
+```
+
+```{r}
+jcdl %>%
+  select(City, OpenDataCensusScores) %>%
+  arrange(desc(OpenDataCensusScores))
+```
